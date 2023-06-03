@@ -1,0 +1,20 @@
+.student__info-link {
+  color: #000;
+
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 14px;;
+  line-height: 17px;
+
+  -webkit-transition: opacity .5s linear 0s;
+  -o-transition: opacity .5s linear 0s;
+  transition: opacity .5s linear 0s;
+}
+
+.student__info-link:hover {
+  opacity: .7;
+}
+
+.student__info-link:not(:last-of-type) {
+  margin-right: 20px;
+}

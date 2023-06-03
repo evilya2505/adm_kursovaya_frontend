@@ -1,0 +1,22 @@
+.about__info-subtitle {
+  margin: 26px 0 0;
+  padding: 0;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .about__info-subtitle  {
+    font-size: 12px;
+    line-height: 18px;
+    margin-top: 22px;
+  }
+}
+
+@media screen and (max-width: 428px) {
+  .about__info-subtitle  {
+    font-size: 11px;
+    line-height: 16px;
+    margin-top: 16px;
+  }
+}

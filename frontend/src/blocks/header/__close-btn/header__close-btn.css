@@ -1,0 +1,27 @@
+.header__close-btn {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .header__close-btn {
+    display: block;
+    position: absolute;
+    top: 23px;
+    right: 23px;
+    background-image: url(../../../images/close-btn.svg);
+    background-color: transparent;
+    width: 30px;
+    min-height: 30px;
+    box-sizing: border-box;
+    border: none;
+    cursor: pointer;
+    z-index: 1001;
+  }
+}
+
+@media screen and (max-width: 428px) {
+  .header__close-btn {
+    top: 14px;
+    right: 14px;
+  }
+}

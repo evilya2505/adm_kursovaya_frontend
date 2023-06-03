@@ -1,0 +1,6 @@
+.search-form__search-icon {
+    margin-right: 10px;
+    background-image: url(../../../images/search-icon.svg);
+    width: 34px;
+    min-height: 34px;
+  }

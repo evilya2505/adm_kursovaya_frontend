@@ -1,0 +1,19 @@
+.footer__bottom-section {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 16px;
+  color: #000;
+}
+
+@media screen and (max-width: 428px) {
+  .footer__bottom-section {
+    margin-top: 30px;
+    flex-direction: column;
+    justify-content: center;
+  }
+}

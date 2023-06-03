@@ -1,0 +1,29 @@
+.search-form__save-btn {
+  margin-right: 19px;
+  font-size: 11px;
+  line-height: 18px;
+  font-weight: 500;
+  border: none;
+  padding: 8px 11px;
+  box-sizing: border-box;
+
+  cursor: pointer;
+  background-color: #000;
+  color: #fff;
+  width: 60px;
+  border-radius: 48px;
+
+  -webkit-transition: opacity .5s linear 0s;
+  -o-transition: opacity .5s linear 0s;
+  transition: opacity .5s linear 0s;
+}
+
+.search-form__save-btn:hover {
+  opacity: .8;
+}
+
+@media screen and (max-width: 640px) {
+  .search-form__save-btn {
+    margin-right: 0;
+  }
+}

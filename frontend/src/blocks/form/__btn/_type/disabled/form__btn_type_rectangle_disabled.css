@@ -1,0 +1,9 @@
+.form__btn_type_rectangle_disabled {
+  background-color: #f8f8f8;
+  color: #c2c2c2;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  pointer-events: none;
+}

@@ -1,0 +1,21 @@
+.card {
+  padding: 22px;
+  max-height: 134px;
+  box-sizing: border-box;
+  background-color: #f9f9f9;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 640px) {
+  .card {
+    overflow: hidden;
+    padding: 0;
+    flex-direction: column;
+    max-height: 232px;
+    max-width: 300px;
+    align-items: flex-start;
+  }
+}

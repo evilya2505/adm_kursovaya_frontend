@@ -1,0 +1,10 @@
+.form__title_type_auth {
+  margin-top: 40px;
+}
+
+@media screen and (max-width: 460px) {
+  .form__title_type_auth {
+    text-align: center;
+    margin-top: 50px;
+  }
+}

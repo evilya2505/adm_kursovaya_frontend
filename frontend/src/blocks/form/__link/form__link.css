@@ -1,0 +1,12 @@
+.form__link {
+  text-decoration: none;
+  color: #000;
+
+  -webkit-transition: opacity .5s linear 0s;
+  -o-transition: opacity .5s linear 0s;
+  transition: opacity .5s linear 0s;
+}
+
+.form__link:hover {
+  opacity: .7;
+}

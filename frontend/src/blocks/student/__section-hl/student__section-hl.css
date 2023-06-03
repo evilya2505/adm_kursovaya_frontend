@@ -1,0 +1,9 @@
+.student__section-hl {
+  margin: 23px 0 66px;
+}
+
+@media screen and (max-width: 428px) {
+  .student__section-hl {
+    margin: 28px 0 60px;
+  }
+}

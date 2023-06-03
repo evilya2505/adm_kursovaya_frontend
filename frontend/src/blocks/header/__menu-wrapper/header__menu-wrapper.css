@@ -1,0 +1,23 @@
+@media screen and (max-width: 768px) {
+  .header__menu-wrapper {
+    padding: 159px 0 90px;
+    box-sizing: border-box;
+    width: 70%;
+    height: 100vh;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: #fff;
+    z-index: 1000;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 428px) {
+  .header__menu-wrapper {
+    width: 100%;
+  }
+}

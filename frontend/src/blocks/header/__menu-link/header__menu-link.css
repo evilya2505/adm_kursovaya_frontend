@@ -1,0 +1,24 @@
+.header__menu-link {
+  color: #000000;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 18px;
+  text-decoration: none;
+  justify-self: end;
+
+  -webkit-transition: opacity .5s linear 0s;
+  -o-transition: opacity .5s linear 0s;
+  transition: opacity .5s linear 0s;
+}
+
+.header__menu-link:hover {
+  opacity: .7;
+}
+
+@media screen and (max-width: 768px) {
+  .header__menu-link {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+  }
+}

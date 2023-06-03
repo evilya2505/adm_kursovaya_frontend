@@ -1,0 +1,5 @@
+.page__header-wrapper {
+  position: relative;
+  max-width: 100%;
+  min-height: 74px;
+}

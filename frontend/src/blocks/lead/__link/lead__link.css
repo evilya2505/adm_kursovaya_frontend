@@ -1,0 +1,24 @@
+.lead__link {
+  min-height: 36px;
+  box-sizing: border-box;
+  color: #000000;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+  padding: 10px 20px;
+  border: 1px solid #000;
+  text-decoration: none;
+  border-radius: 3px;
+  opacity: 0.6;
+  background-color: transparent;
+
+  white-space: nowrap;
+
+  -webkit-transition: opacity 0.5s linear 0s;
+  -o-transition: opacity 0.5s linear 0s;
+  transition: opacity 0.5s linear 0s;
+}
+
+.lead__link:hover {
+  opacity: 0.4;
+}

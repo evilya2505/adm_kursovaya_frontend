@@ -1,0 +1,16 @@
+.tech__body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-weight: 400;
+  letter-spacing: -.04em;
+  color: #000;
+}
+
+@media screen and (max-width: 428px) {
+  .tech__body {
+    padding: 0 10px;
+  }
+}

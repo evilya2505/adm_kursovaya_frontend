@@ -1,0 +1,9 @@
+.search-form__section-hl {
+    margin: 69px 0 0;
+  }
+
+  @media screen and (max-width: 640px) {
+    .search-form__section-hl {
+      margin-top: 46px;
+    }
+  }

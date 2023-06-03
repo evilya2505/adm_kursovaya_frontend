@@ -1,0 +1,6 @@
+@media screen and (max-width: 640px) {
+    .search-form__section-vl {
+      display: none;
+    }
+  }
+  

@@ -1,0 +1,13 @@
+.header__menu-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-self: start;
+}
+
+@media screen and (max-width: 768px) {
+  .header__menu-list {
+    flex-direction: column;
+  }
+}

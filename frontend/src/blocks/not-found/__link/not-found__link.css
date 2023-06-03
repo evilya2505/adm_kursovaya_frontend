@@ -1,0 +1,28 @@
+.not-found__link {
+  text-decoration: none;
+  font-family: "Inter";
+  margin: 184px 0 0;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  color: #000;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+
+  -webkit-transition: opacity .5s linear 0s;
+  -o-transition: opacity .5s linear 0s;
+  transition: opacity .5s linear 0s;
+}
+
+.not-found__link:hover {
+  opacity: .7;
+}
+
+@media screen and (max-width: 428px) {
+  .not-found__link {
+    font-size: 12px;
+    line-height: 15px;
+  }
+}

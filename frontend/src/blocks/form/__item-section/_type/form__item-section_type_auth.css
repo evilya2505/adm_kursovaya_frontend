@@ -1,0 +1,8 @@
+.form__item-section_type_auth {
+  width: 100%;
+  flex-direction: column;
+}
+
+.form__item-section_type_auth:not(:last-of-type) {
+  margin-bottom: 24px;
+}

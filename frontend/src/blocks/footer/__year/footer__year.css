@@ -1,0 +1,11 @@
+.footer__year {
+  margin: 0;
+}
+
+@media screen and (max-width: 428px) {
+  .footer__year {
+    order: 2;
+    margin-top: 30px;
+    color: #a0a0a0;
+  }
+}

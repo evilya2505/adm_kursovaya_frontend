@@ -1,0 +1,10 @@
+.search-error__img {
+  width: 300px;
+  margin-top: 40px;
+}
+
+@media screen and (max-width: 768px) {
+  .search-error__img {
+    width: 180px;
+  }
+}

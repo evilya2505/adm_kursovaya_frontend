@@ -1,0 +1,10 @@
+.content__tech-wrapper {
+  background-color: #f5f5f5;
+  width: 100%;
+}
+
+@media screen and (max-width: 428px) {
+  .content__tech-wrapper {
+    background-color: #f5f5f5;
+  }
+}

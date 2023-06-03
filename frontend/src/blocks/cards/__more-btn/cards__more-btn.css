@@ -1,0 +1,15 @@
+.cards__more-btn {
+  margin: 61px 0 0;
+  border: none;
+  background-color: #f9f9f9;
+  border-radius: 6px;
+  width: 320px;
+  min-height: 36px;
+
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  text-align: center;
+  color: #000;
+  cursor: pointer;
+}

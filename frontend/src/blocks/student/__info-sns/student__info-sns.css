@@ -1,0 +1,26 @@
+.student__info-sns {
+  margin: 99px 0 0;
+  padding: 0;
+  list-style: none;
+
+  display: flex;
+}
+
+@media screen and (max-width: 768px) {
+  .student__info-sns {
+    margin-top: 87px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .student__info-sns {
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 428px) {
+  .student__info-sns {
+    margin-top: 40px;
+    justify-content: flex-start;
+  }
+}

@@ -1,0 +1,10 @@
+.footer__sns-list-item:not(:last-of-type) {
+  margin-right: 20px;
+}
+
+@media screen and (max-width: 428px) {
+  .footer__sns-list-item:not(:last-of-type) {
+    margin-right: 0px;
+    margin-bottom: 12px;
+  }
+}

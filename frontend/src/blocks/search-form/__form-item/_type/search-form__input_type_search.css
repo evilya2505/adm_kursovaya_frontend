@@ -1,0 +1,25 @@
+.search-form__form-item_type_search {
+  width: 80%;
+  border: none;
+  padding: 0;
+  margin-right: auto;
+  font-family: "Inter";
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: 400;
+  color: #000;
+}
+
+.search-form__form-item_type_search::placeholder {
+  color: #a0a0a0;
+}
+
+.search-form__form-item_type_search:active {
+  outline: none;
+  border-bottom: 1px solid #000;
+}
+
+.search-form__form-item_type_search:focus {
+  outline: none;
+  border-bottom: 1px solid #000;
+}

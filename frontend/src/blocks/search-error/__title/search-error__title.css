@@ -1,0 +1,16 @@
+.search-error__title {
+  margin: 0;
+  max-width: 800px;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: center;
+  color: #000;
+}
+
+@media screen and (max-width: 428px) {
+  .search-error__title {
+    font-size: 17px;
+    line-height: 28px;
+  }
+}

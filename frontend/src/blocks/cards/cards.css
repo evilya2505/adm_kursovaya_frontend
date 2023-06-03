@@ -1,0 +1,17 @@
+.cards {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+
+  min-height: calc(100vh - 303px - 77px - 177px);
+}
+
+@media screen and (max-width: 768px) {
+  .cards {
+    max-width: 708px;
+  }
+}

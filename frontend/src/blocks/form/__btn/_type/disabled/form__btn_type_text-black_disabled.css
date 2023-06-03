@@ -1,0 +1,8 @@
+.form__btn_type_text-black_disabled {
+  color: #c2c2c2;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  pointer-events: none;
+}

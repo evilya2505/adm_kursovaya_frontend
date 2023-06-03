@@ -1,0 +1,11 @@
+.form__item-section_type_profile {
+  display: flex;
+  justify-content: space-between;
+  width: 410px;
+}
+
+@media screen and (max-width: 428px) {
+  .form__item-section_type_profile {
+    width: 260px;
+  }
+}

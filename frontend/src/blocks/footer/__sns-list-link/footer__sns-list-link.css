@@ -1,0 +1,15 @@
+.footer__sns-list-link {
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 16px;
+  color: #000;
+  text-decoration: none;
+
+  -webkit-transition: opacity .5s linear 0s;
+  -o-transition: opacity .5s linear 0s;
+  transition: opacity .5s linear 0s;
+}
+
+.footer__sns-list-link:hover {
+  opacity: .7;
+}

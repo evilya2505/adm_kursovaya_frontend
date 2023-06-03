@@ -1,0 +1,27 @@
+.card__like-btn {
+  margin: 30px 0 0;
+  background-size: contain;
+  background-repeat: no-repeat;
+  border: none;
+  background-color: transparent;
+  background-image: url(../../../images/unsaved.svg);
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  -webkit-transition: all 0.1s linear 0s;
+  -o-transition: all 0.1s linear 0s;
+  transition: all 0.1s linear 0s;
+}
+
+.card__like-btn:hover {
+  opacity: 0.7;
+}
+
+@media screen and (max-width: 640px) {
+  .card__like-btn {
+    margin: 0;
+    justify-self: end;
+    grid-column-start: 2;
+    grid-row-start: 1;
+  }
+}

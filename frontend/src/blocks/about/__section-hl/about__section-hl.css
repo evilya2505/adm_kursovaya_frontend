@@ -1,0 +1,9 @@
+.about__section-hl {
+  margin: 23px 0 70px;
+}
+
+@media screen and (max-width: 428px) {
+  .about__section-hl {
+    margin: 28px 0 60px;
+  }
+}

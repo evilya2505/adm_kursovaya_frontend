@@ -1,0 +1,15 @@
+.footer__sns-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  display: flex;
+}
+
+@media screen and (max-width: 428px) {
+  .footer__sns-list {
+    flex-direction: column;
+    text-align: center;
+    order: 1;
+  }
+}

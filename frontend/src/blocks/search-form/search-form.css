@@ -1,0 +1,11 @@
+.search-form {
+    padding: 70px 15px;
+    max-width: 1140px;
+    margin: 0 auto;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .search-form {
+      max-width: 708px;
+    }
+  }

@@ -1,0 +1,25 @@
+.student__info-img {
+  border-radius: 10px;
+  width: 270px;
+  height: 327px;
+}
+
+@media screen and (max-width: 768px) {
+  .student__info-img {
+    width: 255px;
+    height: 307px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .student__info-img {
+    order: 1;
+  }
+}
+
+@media screen and (max-width: 428px) {
+  .student__info-img {
+    width: 292px;
+    height: 352px;
+  }
+}
