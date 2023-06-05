@@ -1,5 +1,5 @@
 .lead {
-  background-color: #f3c1f8;
+  background-color: #b3c9ca;
   max-width: 1140px;
   margin: 0 auto;
 
@@ -22,9 +22,13 @@
   font-weight: 500;
   font-size: 16px;
   line-height: 1.4;
-  width: 200px;
-  height: 100px;
+  width: 300px;
+  height: 200px;
   transition: all 0.2s;
+}
+
+.lead__textarea:not(:last-of-type) {
+  margin-right: 50px;
 }
 
 .lead__textarea:hover {
@@ -51,6 +55,17 @@
 
     max-width: 728px;
     flex-direction: column;
+    align-items: center;
+  }
+
+  .lead__textarea:not(:last-of-type) {
+    margin-right: 0px;
+    margin-bottom: 20px;
+  }
+
+  .lead__btn-section {
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
   }
 }

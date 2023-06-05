@@ -44,45 +44,6 @@
 @import url(./blocks/lead/__subtitle/lead__subtitle.css);
 @import url(./blocks/lead/__img/lead__img.css);
 
-@import url(./blocks/about/about.css);
-@import url(./blocks/about/__scale/about__scale.css);
-@import url(./blocks/about/__scale-title/about__scale-title.css);
-@import url(./blocks/about/__scale-title/_type/about__scale-title_type_gray.css);
-@import url(./blocks/about/__scale-title/_type/about__scale-title_type_black.css);
-@import url(./blocks/about/__scale-subtitle/about__scale-subtitle.css);
-@import url(./blocks/about/__scale-item/about__scale-item.css);
-@import url(./blocks/about/__info/about__info.css);
-@import url(./blocks/about/__info-title/about__info-title.css);
-@import url(./blocks/about/__info-subtitle/about__info-subtitle.css);
-@import url(./blocks/about/__info-item/about__info-item.css);
-@import url(./blocks/about/__section-hl/about__section-hl.css);
-
-@import url(./blocks/tech/tech.css);
-@import url(./blocks/tech/__table/tech__table.css);
-@import url(./blocks/tech/__table-item/tech__table-item.css);
-@import url(./blocks/tech/__body/tech__body.css);
-@import url(./blocks/tech/__body-title/tech__body-title.css);
-@import url(./blocks/tech/__body-subtitle/tech__body-subtitle.css);
-@import url(./blocks/tech/__section-hl/tech__section-hl.css);
-
-@import url(./blocks/student/student.css);
-@import url(./blocks/student/__portfolio/student__portfolio.css);
-@import url(./blocks/student/__portfolio-title/student__portfolio-title.css);
-@import url(./blocks/student/__portfolio-list/student__portfolio-list.css);
-@import url(./blocks/student/__portfolio-item/student__porfolio-item.css);
-@import url(./blocks/student/__portfolio-item-link/student__portfolio-item-link.css);
-@import url(./blocks/student/__portfolio-item-img/student__portfolio-item-img.css);
-@import url(./blocks/student/__info/student__info.css);
-@import url(./blocks/student/__info-title/student__info-title.css);
-@import url(./blocks/student/__info-text/student__info-text.css);
-@import url(./blocks/student/__info-subtitle/student__info-subtitle.css);
-@import url(./blocks/student/__info-sns/student__info-sns.css);
-@import url(./blocks/student/__info-link/student__info-link.css);
-@import url(./blocks/student/__info-img/student__info-img.css);
-@import url(./blocks/student/__info-description/student__info-description.css);
-@import url(./blocks/student/__info-about/student__info-about.css);
-@import url(./blocks/student/__section-hl/student__section-hl.css);
-
 @import url(./blocks/search-form/search-form.css);
 @import url(./blocks/search-form/__section-vl/search-form__section-vl.css);
 @import url(./blocks/search-form/__section-hl/search-form__section-hl.css);

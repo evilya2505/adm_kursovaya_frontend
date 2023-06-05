@@ -32,14 +32,14 @@ function Promo({ loggedIn, addResult }) {
           <div className="lead__text">
             <textarea
               className="lead__textarea"
-              placeholder="Enter a message..."
+              placeholder="Введите текст 1"
               name="first"
               value={message1}
               onChange={handleMessageChange}
             ></textarea>
             <textarea
               className="lead__textarea"
-              placeholder="Enter a message..."
+              placeholder="Введите текст 2"
               name="second"
               value={message2}
               onChange={handleMessageChange}

@@ -3,11 +3,14 @@
   padding: 0;
   margin: 0;
   width: 100%;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 @media screen and (max-width: 640px) {
   .cards__list {
-    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;

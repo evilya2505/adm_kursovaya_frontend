@@ -1,12 +1,13 @@
 .card__like-btn {
-  margin: 30px 0 0;
+  /* margin: 30px 0 0; */
+  margin-top: 20px;
   background-size: contain;
   background-repeat: no-repeat;
   border: none;
   background-color: transparent;
   background-image: url(../../../images/unsaved.svg);
-  width: 20px;
-  height: 20px;
+  width: 25px;
+  height: 25px;
   cursor: pointer;
   -webkit-transition: all 0.1s linear 0s;
   -o-transition: all 0.1s linear 0s;
