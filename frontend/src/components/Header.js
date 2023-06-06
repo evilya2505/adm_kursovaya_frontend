@@ -44,9 +44,9 @@ function Header({ loggedIn, handlePageScroll }) {
             )}
             <li className="header__menu-item">
               <Link
-                to="/saved-movies"
+                to="/saved-results"
                 className={
-                  location.pathname === "/saved-movies"
+                  location.pathname === "/saved-results"
                     ? `header__menu-link header__menu-link_active`
                     : `header__menu-link`
                 }

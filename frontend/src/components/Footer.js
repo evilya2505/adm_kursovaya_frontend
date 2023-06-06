@@ -12,7 +12,7 @@ function Footer(props) {
             <a
               target="_blank"
               rel="noreferrer"
-              href="https://github.com/"
+              href="https://github.com/evilya2505"
               className="footer__sns-list-link"
             >
               Github

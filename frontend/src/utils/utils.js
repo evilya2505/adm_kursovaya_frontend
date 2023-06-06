@@ -1,32 +1,28 @@
-function sortFilms(keyWord, films) {
+function sortFilms(keyWord, results) {
   // Хранит данные подходящие под запрос пользователя
   // let matchedFilmsEN = [];
-  let matchedFilmsRU = [];
+  let matchedResults = [];
   let res = [];
 
   keyWord = keyWord.trim();
 
   if (keyWord !== "") {
-    films.forEach((film) => {
-      // Если строка подходит под запрос, то добавляет автора в массив matchedFilmsRU
-      isCointainValue(film.firstText, keyWord) && matchedFilmsRU.push(film);
-      isCointainValue(film.secondText, keyWord) && matchedFilmsRU.push(film);
+    results.forEach((result) => {
+      // Если строка подходит под запрос, то добавляет карточку в массив matchedResults
+      console.log(isCointainValue(result.firstText, keyWord));
+      isCointainValue(result.firstText, keyWord) && matchedResults.push(result);
+      isCointainValue(result.secondText, keyWord) &&
+        matchedResults.push(result);
     });
 
-    // ? Сортировка по английскому названию
-    // films.forEach(film => {
-    //   // Если строка подходит под запрос, то добавляет автора в массив matchedFilmsEN
-    //   (isCointainValue(film.nameEN, keyWord) && matchedFilmsEN.push(film));
-    // });
-
-    // Убирает одинаковые фильмы
-    res = matchedFilmsRU.reduce((stack, item) => {
+    // Убирает одинаковые карточки
+    res = matchedResults.reduce((stack, item) => {
       if (!stack[0]) {
         stack.push(item);
       } else {
         let isContain = [];
         for (let i = 0; i < stack.length; i++) {
-          stack[i].id === item.id
+          stack[i]._id === item._id
             ? isContain.push(false)
             : isContain.push(true);
         }
@@ -83,39 +79,28 @@ function isCointainValue(dataStr, inputValue) {
   }
 }
 
-function returnShortFilmsOnly(arr) {
-  let res = [];
-
-  arr.forEach((item) => {
-    item.duration <= 40 && res.push(item);
-  });
-
-  return res;
-}
-
 function wagnerFischer(str1, str2) {
   if (typeof str1 !== "string" || typeof str2 !== "string")
-    throw new Error("Pass two strings!");
+    throw new Error("Неверный формат переданных данных");
 
-  var distances = [];
+  str1 = str1.trim();
+  str2 = str2.trim();
 
-  for (var i = 0; i <= str1.length; ++i) distances[i] = [i];
-  for (var i = 0; i <= str2.length; ++i) distances[0][i] = i;
-
-  for (var j = 1; j <= str2.length; ++j)
-    for (var i = 1; i <= str1.length; ++i)
+  let distances = [];
+  for (let i = 0; i <= str1.length; ++i) distances[i] = [i];
+  for (let i = 0; i <= str2.length; ++i) distances[0][i] = i;
+  for (let j = 1; j <= str2.length; ++j)
+    for (let i = 1; i <= str1.length; ++i)
       distances[i][j] =
-        str1[i - 1] === str2[j - 1] // if the characters are equal
-          ? distances[i - 1][j - 1] // no operation needed
-          : // else
-            Math.min.apply(Math, [
-              // take the minimum between
-              distances[i - 1][j] + 1, // a  deletion
-              distances[i][j - 1] + 1, // an insertion
-              distances[i - 1][j - 1] + 1, // a  substitution
+        str1[i - 1] === str2[j - 1]
+          ? distances[i - 1][j - 1]
+          : Math.min.apply(Math, [
+              distances[i - 1][j] + 1,
+              distances[i][j - 1] + 1,
+              distances[i - 1][j - 1] + 1,
             ]);
 
   return distances[str1.length][str2.length];
 }
 
-export { sortFilms, returnShortFilmsOnly, wagnerFischer };
+export { sortFilms, wagnerFischer };

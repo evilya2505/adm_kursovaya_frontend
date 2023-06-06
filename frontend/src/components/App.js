@@ -3,29 +3,26 @@ import { Route, Switch, useHistory, useLocation } from "react-router-dom";
 import Header from "./Header";
 import Footer from "./Footer";
 import Main from "./Main";
-import SavedMovies from "./SavedMovies";
 import Profile from "./Profile";
 import Register from "./Register";
 import Login from "./Login";
 import NotFound from "./NotFound";
-import moviesApi from "../utils/MoviesApi";
-import { sortFilms, returnShortFilmsOnly } from "../utils/utils";
+import { sortFilms } from "../utils/utils";
 import mainApi from "../utils/MainApi";
 import { CurrentUserContext } from "../contexts/CurrentUserContext";
 import ProtectedRoute from "./ProtectedRoute";
+import SavedResults from "./SavedResults";
 
 function App() {
   // Стейт-переменная, содержит информацию о статусе пользователя - вошел он в систему или нет
-  const [results, setResults] = React.useState([]);
   const [loggedIn, setLoggedIn] = React.useState(true);
   const [isScrollAllowed, setIsScrollAllowed] = React.useState(true);
   const [isLoading, setIsLoading] = React.useState(false);
   const [isError, setIsError] = React.useState(false);
   const [isSuccess, setIsSuccess] = React.useState(false);
   const [isSending, setIsSending] = React.useState(false);
-  const [savedFilmsSearchResults, setSavedFilmsSearchResults] = React.useState(
-    []
-  );
+  const [savedResultsSearchResults, setSavedResultsSearchResults] =
+    React.useState([]);
   const [isNotFoundNotificationShown, setIsNotFoundNotificationShown] =
     React.useState({ page: "", state: false });
 
@@ -35,7 +32,7 @@ function App() {
     email: "",
     _id: "",
   });
-  const [savedMovies, setSavedMovies] = React.useState([]);
+  const [savedResults, setSavedResults] = React.useState([]);
 
   // Хранит токен текущего пользователя
   const [token, setToken] = React.useState("");
@@ -68,7 +65,7 @@ function App() {
       mainApi
         .getInitialData(token)
         .then(([userData, savedMoviesData]) => {
-          setSavedMovies(
+          setSavedResults(
             savedMoviesData.data.reduce((stack, item) => {
               item.owner._id === userData.data._id && stack.push(item);
 
@@ -87,7 +84,7 @@ function App() {
   React.useEffect(() => {
     if (loggedIn) {
       if (location.pathname === "/signin" || location.pathname === "/signup") {
-        history.push("/saved-movies");
+        history.push("/saved-results");
       }
     }
   }, [location.pathname, loggedIn, history]);
@@ -106,12 +103,12 @@ function App() {
     setIsError(false);
 
     setIsLoading(true);
-    const sortedFilms = sortFilms(keyWord, savedMovies);
+    const sortedFilms = sortFilms(keyWord, savedResults);
 
-    setSavedFilmsSearchResults(sortedFilms);
+    setSavedResultsSearchResults(sortedFilms);
 
     if (sortedFilms.length < 1) {
-      setIsNotFoundNotificationShown({ page: "/saved-movies", state: true });
+      setIsNotFoundNotificationShown({ page: "/saved-results", state: true });
     }
 
     setIsLoading(false);
@@ -175,11 +172,17 @@ function App() {
       });
   }
 
-  function handleDeleteBtnClick(filmData) {
+  function handleDeleteBtnClick(resultData) {
     mainApi
-      .deleteCard(filmData, token)
+      .deleteCard(resultData, token)
       .then((data) => {
-        setSavedMovies((state) => state.filter((c) => c._id !== filmData._id));
+        setSavedResults((state) =>
+          state.filter((c) => c._id !== resultData._id)
+        );
+        if (savedResultsSearchResults.length != 0)
+          setSavedResultsSearchResults((state) =>
+            state.filter((c) => c._id !== resultData._id)
+          );
       })
       .catch((err) => {
         console.log(err);
@@ -193,11 +196,11 @@ function App() {
 
   function addResult(data) {
     mainApi
-      .postFilm(data, token)
+      .postResult(data, token)
       .then((res) => {
-        let temp = savedMovies;
+        let temp = savedResults;
         temp.push(res.data);
-        setSavedMovies(temp);
+        setSavedResults(temp);
       })
       .catch((err) => {
         console.log(err);
@@ -206,7 +209,7 @@ function App() {
 
   function handleResetSearchResults() {
     setIsNotFoundNotificationShown({ page: "", state: false });
-    setSavedFilmsSearchResults([]);
+    setSavedResultsSearchResults([]);
   }
 
   return (
@@ -221,18 +224,17 @@ function App() {
 
           <ProtectedRoute
             exact
-            path="/saved-movies"
+            path="/saved-results"
             loggedIn={loggedIn}
             handlePageScroll={handlePageScroll}
             handleSearchButton={handleSearchButton}
             isLoading={isLoading}
             isError={isError}
-            searchResult={savedFilmsSearchResults}
-            component={SavedMovies}
-            savedMovies={savedMovies}
+            searchResult={savedResultsSearchResults}
+            component={SavedResults}
+            savedResults={savedResults}
             handleDeleteBtnClick={handleDeleteBtnClick}
             isNotFoundNotificationShown={isNotFoundNotificationShown}
-            results={results}
             handleResetSearchResults={handleResetSearchResults}
           />
 

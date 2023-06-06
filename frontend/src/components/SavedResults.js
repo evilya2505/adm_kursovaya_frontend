@@ -1,5 +1,5 @@
 import React from "react";
-import MoviesCard from "./MoviesCard";
+import ResultCard from "./ResultCard";
 import Header from "./Header";
 import Footer from "./Footer";
 import SearchError from "./SearchError";
@@ -7,9 +7,9 @@ import SearchForm from "./SearchForm";
 import Preloader from "./Preloader";
 import NoResultsError from "./NoResultsError";
 
-function SavedMovies({
+function SavedResults({
   isNotFoundNotificationShown,
-  savedMovies,
+  savedResults,
   loggedIn,
   handlePageScroll,
   handleSearchButton,
@@ -29,19 +29,19 @@ function SavedMovies({
 
     if (searchResult.length < 1) {
       if (
-        isNotFoundNotificationShown.page === "/saved-movies" &&
+        isNotFoundNotificationShown.page === "/saved-results" &&
         isNotFoundNotificationShown.state === true
       ) {
         filmsForLoadingTemp = [];
       } else {
-        filmsForLoadingTemp = savedMovies;
+        filmsForLoadingTemp = savedResults;
       }
     } else if (searchResult.length > 0) {
       filmsForLoadingTemp = searchResult;
     }
 
     setFilmsForLoading(filmsForLoadingTemp);
-  }, [searchResult, savedMovies]);
+  }, [searchResult, savedResults]);
 
   return (
     <>
@@ -52,7 +52,7 @@ function SavedMovies({
       />
       <section className="cards content__cards">
         {isLoading ? <Preloader /> : ""}
-        {isNotFoundNotificationShown.page === "/saved-movies" &&
+        {isNotFoundNotificationShown.page === "/saved-results" &&
         isNotFoundNotificationShown.state === true ? (
           <NoResultsError />
         ) : (
@@ -65,7 +65,7 @@ function SavedMovies({
             {Array.isArray(filmsForLoading) &&
               filmsForLoading.map((result) => {
                 return (
-                  <MoviesCard
+                  <ResultCard
                     handleDeleteBtnClick={handleDeleteBtnClick}
                     result={result}
                     key={result._id}
@@ -83,4 +83,4 @@ function SavedMovies({
   );
 }
 
-export default SavedMovies;
+export default SavedResults;

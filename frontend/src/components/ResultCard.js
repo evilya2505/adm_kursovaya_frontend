@@ -1,6 +1,6 @@
 import React from "react";
 
-function MoviesCard({
+function ResultCard({
   result,
   levenshteinDistance,
   firstText,
@@ -30,4 +30,4 @@ function MoviesCard({
   );
 }
 
-export default MoviesCard;
+export default ResultCard;

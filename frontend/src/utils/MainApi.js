@@ -67,7 +67,7 @@ class MainApi {
   }
 
   // Добавляет фильм на сервер
-  postFilm(filmData, token) {
+  postResult(filmData, token) {
     return fetch(`${this._baseUrl}/results`, {
       method: "POST",
       headers: {
@@ -83,7 +83,7 @@ class MainApi {
   }
 
   // Получает сохраненные фильмы
-  getSavedMovies(token) {
+  getSavedResults(token) {
     return fetch(`${this._baseUrl}/results`, {
       headers: {
         ...this._headers,
@@ -104,7 +104,7 @@ class MainApi {
   }
 
   getInitialData(token) {
-    return Promise.all([this.getUserInfo(token), this.getSavedMovies(token)]);
+    return Promise.all([this.getUserInfo(token), this.getSavedResults(token)]);
   }
 }
 
